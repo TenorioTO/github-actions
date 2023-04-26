@@ -13,3 +13,8 @@ jobs:
     runs-on: macos-latest
     steps:
       - run: date
+  dependencies:
+    needs: [ubuntu, windows, macos]
+    runs-on: windows-latest
+    steps:
+      - run: date
