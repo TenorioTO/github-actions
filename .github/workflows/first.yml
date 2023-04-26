@@ -1,11 +1,12 @@
-name: first
-on: push
+name: actions dependencies
+run-name: ${{ github.actor }} is learning GitHub Actions
+on: [push]
 
 jobs:
   ubuntu:
     runs-on: ubuntu-latest
     steps:
-      run: date
+      - run: date
   windows:
     needs: ubuntu
     runs-on: windows-latest
@@ -15,9 +16,9 @@ jobs:
     needs: windows
     runs-on: macos-latest
     steps:
-      run: date
+      - run: date
   depends:
     needs: macos
     runs-on: ubuntu-latest
     steps:
-      run: date
+      - run: date
