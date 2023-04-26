@@ -1,7 +1,6 @@
-name: actions dependencies
+name: first
 run-name: ${{ github.actor }} is learning GitHub Actions
 on: [push]
-
 jobs:
   ubuntu:
     runs-on: ubuntu-latest
