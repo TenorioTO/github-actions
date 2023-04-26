@@ -7,16 +7,16 @@ jobs:
     steps:
       run: date
   windows:
-   needs: ubuntu
+    needs: ubuntu
     runs-on: windows-latest
     steps:
       run: date
   macos:
-   needs: windows
+    needs: windows
     runs-on: macos-latest
     steps:
       run: date
-  depends: 
+  depends:
     needs: macos
     runs-on: ubuntu-latest
     steps:
